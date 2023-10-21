@@ -1,0 +1,63 @@
+// Header.js
+import React from 'react';
+
+function Header() {
+  return (
+    
+    <header>
+     
+<header>
+      <h1>My Task List</h1>
+    </header>
+  );
+}
+
+export default Header;
+jsx
+
+Copiar código
+// Task.js
+import React from 'react';
+
+function Task({ task, onToggle }) {
+  return (
+    
+    <div>
+      <label>
+        
+   
+<div>
+      <label>
+        <input type="checkbox" checked={task.completed} onChange={() => onToggle(task.id)} />
+        {task.name}
+      </label>
+    </div>
+  );
+}
+
+export default Task;
+jsx
+
+Copiar código
+// TaskList.js
+import React from 'react';
+import Task from './Task';
+
+function TaskList({ tasks, onToggle }) {
+  return (
+    
+    <div>
+      tasks.
+    <div>
+      
+
+<div>
+      {tasks.map((task) => (
+        <Task key={task.id} task={task} onToggle={onToggle} />
+      ))}
+    </div>
+  );
+  
+}
+
+export default TaskList;
